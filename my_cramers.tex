@@ -197,11 +197,17 @@ def dia_det(A):
 	return det
 \end{lstlisting}
 
-\begin{align*}
-\end{align*}
 
-\begin{lstlisting}[language=Python]
-\end{lstlisting}
+\section*{Thoughts, Opinions, and Future Directions}
+I hold the opinion that attempting a more efficient general system of equations solver is not a good use of time. There may be some interesting and large areas of study that involve sparse matrices or specialized solutions. Potential matrices of this type are available through \textit{NLEVP: A Collection of Nonlinear Eigenvalue Problems}, a collection of 52 nonlinear eigenvalue problems in the form of a MATLAB toolbox. (\url{https://github.com/ftisseur/nlevp})
+
+Alternatively, perhaps there is some room for improvement when working with sparse matrices. I did not look closely at sparse matrices to understand the set of algorithms available to solve systems of this type. There are however a number of interesting algorithms that have developed from the human genome project that permit faster classification, ordering or extreme densification of data and may allow for improved results when dealing with sparse matrices.
+
+It is also important to understand how accurate our results need to be. For some systems, dropping half of a properly ordered data set may have minimal impact on the result and would allow for use of additional decomposition methods. Some of this falls into the methods of matrix preconditioning, which is a topic for further review.
+
+\subsection*{Is Python the right approach?}
+I would argue that python is not really the best language for directly comparing comparing algorithm efficiency. It is fine for the general development of the algorithm but will fail at direct comparison because many of the core underlying algorithms are compiled linked objects. Any code run in the python interpreter will necessarily run slower. If any algorithms are developed, they should be further tested in a compiled language such as Julia.
+
 
 \section*{Resources}
 \begin{itemize}
@@ -214,6 +220,7 @@ def dia_det(A):
 	\item \url{https://www.netlib.org/lapack/lug/node71.html} Table 3.13
 	\item \url{http://www.ma.man.ac.uk/~higham/mctoolbox/}
 	\item \url{https://people.sc.fsu.edu/~jburkardt/py_src/test_mat/test_mat.html}
+	\item \url{https://github.com/ftisseur/nlevp}
 \end{itemize}
 
 \begin{align*}
