@@ -133,3 +133,4 @@ dmypy.json
 *.out
 *.gz
 /*.pdf
+*.backup2
